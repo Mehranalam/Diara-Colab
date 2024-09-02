@@ -2,6 +2,8 @@
 
 [![cron](https://github.com/Mehranalam/Diara-Colab/actions/workflows/cron.yml/badge.svg)](https://github.com/Mehranalam/Diara-Colab/actions/workflows/cron.yml)
 
+![pic](PIC.jpg)
+
 Diara Colab is an automatic article receiving service that is integrated with Google Scholar. It is designed to streamline the process of collecting and managing academic publications by automatically pulling in articles relevant to your research interests.
 
 ### How Diara Colab Works:
