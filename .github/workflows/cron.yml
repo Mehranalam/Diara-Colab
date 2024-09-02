@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-      - cron: "50 20 * * *"
+      - cron: "30 17 * * *"
 env:
   API_HASH: ${{ secrets.API_HASH }}
   API_ID: ${{ secrets.API_ID }}
