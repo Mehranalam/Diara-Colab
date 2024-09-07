@@ -70,9 +70,12 @@ def welcome():
 
     return RESUKLT
 
+
+output = welcome()
+
 async def main():
     async with app:
-        await app.send_message(TARGET_group ,welcome(), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
-        await app.send_message(TARGET ,welcome(), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+        await app.send_message(TARGET_group ,output, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+        await app.send_message(TARGET ,output, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
 app.run(main())
