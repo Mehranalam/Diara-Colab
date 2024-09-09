@@ -10,7 +10,7 @@ api_hash = os.environ['API_HASH']
 api_id = os.environ['API_ID']
 
 TARGET = 'DiaraArchive'
-TARGET_group = -1002010173960
+TARGET_group = 'PostBlog_cabea'
 
 app = Client(
     "my_bot",
