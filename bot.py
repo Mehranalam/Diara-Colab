@@ -10,7 +10,6 @@ api_hash = os.environ['API_HASH']
 api_id = os.environ['API_ID']
 
 TARGET = 'DiaraArchive'
-TARGET_group = 'PostBlog_cabea'
 
 app = Client(
     "my_bot",
@@ -75,7 +74,6 @@ output = welcome()
 
 async def main():
     async with app:
-        await app.send_message(TARGET_group ,output, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
         await app.send_message(TARGET ,output, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
 app.run(main())
