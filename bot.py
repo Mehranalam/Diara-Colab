@@ -72,13 +72,14 @@ def welcome():
     
     return RESUKLT
 
+
 def mind(result):
     genai.configure(api_key=open_token)
 
     model = genai.GenerativeModel("gemini-1.5-flash")
     content = f"""لطفا این مقاله رو به شکل خیلی خوب و با جزيیات بررسی کن و برداشت هات رو به شکل زبان عامیانه فارسی در حد ۴ پاراگراف شرح بده و دقیقا توضیح بده این مقاله رو.
 
-لینک مقاله و خلاصه‌ای ازش: {RESUKLT}
+لینک مقاله و خلاصه‌ای ازش: {result}
 
 لطفا انتهای پست هم رفرنس بزار و ارجاع بده.
 """
