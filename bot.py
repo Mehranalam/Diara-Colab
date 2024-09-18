@@ -92,8 +92,12 @@ def welcome():
     
     return RESUKLT
 
+try:
+    output = welcome()
+except:
+    print("again! :))")
+    output = welcome()
 
-output = welcome()
 
 async def main():
     async with app:
