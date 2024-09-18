@@ -71,7 +71,6 @@ def welcome():
             "**🌊 تمام مقالات ارسالی توسط ربات داخل کانال @DiaraArchive برای دسترسی بهتر آرشیو خواهد شد.**"
 
 
-    '''
     client = openai.OpenAI()
 
     completion = client.chat.completions.create(
@@ -87,10 +86,8 @@ def welcome():
         ]
     )
 
-    completion.choices[0].message
-    '''
     
-    return RESUKLT
+    return completion.choices[0].message
 
 try:
     output = welcome()
