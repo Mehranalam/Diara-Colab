@@ -94,7 +94,7 @@ def welcome():
 
 try:
     output = welcome()
-except:
+except scholarly._proxy_generator.MaxTriesExceededException:
     print("again! :))")
     output = welcome()
 
