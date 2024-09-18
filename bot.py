@@ -12,7 +12,7 @@ api_id = os.environ['API_ID']
 
 open_token = os.environ['OPENAI_TOKEN']
 
-TARGET = 'mehranbbop'
+TARGET = 'DiaraArchive'
 
 app = Client(
     "my_bot",
@@ -71,6 +71,7 @@ def welcome():
             "**🌊 تمام مقالات ارسالی توسط ربات داخل کانال @DiaraArchive برای دسترسی بهتر آرشیو خواهد شد.**"
 
 
+    '''
     client = openai.OpenAI()
 
     completion = client.chat.completions.create(
@@ -87,6 +88,7 @@ def welcome():
     )
 
     completion.choices[0].message
+    '''
     
     return RESUKLT
 
