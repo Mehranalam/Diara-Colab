@@ -24,10 +24,11 @@ jobs:
         uses: actions/setup-python@v2                               
         with:                                 
           python-version: '3.8'                                                   
-      - name: 💿 Install scholarly & pyrogram                              
+      - name: 💿 Install scholarly & pyrogram and set API                            
         run: pip install scholarly pyrogram openai
       - name: 🍳 run bot.py
         run: |
+          run: export OPENAI_API_KEY=${{ secrets.OPENAI_TOKEN }}
           cd ${GITHUB_WORKSPACE}/
           python bot.py
       - name: 🚀 Deploy
