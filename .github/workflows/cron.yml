@@ -23,7 +23,7 @@ jobs:
       - name: 🐍 Set up Python 3.8                               
         uses: actions/setup-python@v2                               
         with:                                 
-          python-version: '3.8'                                                   
+          python-version: '3.10'                                                   
       - name: 💿 Install scholarly & pyrogram and set API                            
         run: pip install scholarly pyrogram openai google-generativeai==0.3.1
       - name: 🍳 run bot.py
