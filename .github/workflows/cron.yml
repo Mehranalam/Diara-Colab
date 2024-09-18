@@ -25,7 +25,7 @@ jobs:
         with:                                 
           python-version: '3.8'                                                   
       - name: 💿 Install scholarly & pyrogram and set API                            
-        run: pip install scholarly pyrogram openai
+        run: pip install scholarly pyrogram openai google-generativeai
       - name: 🍳 run bot.py
         run: |
           export OPENAI_API_KEY=${{ secrets.OPENAI_TOKEN }}
