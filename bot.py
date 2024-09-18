@@ -5,6 +5,7 @@ import random
 import os
 import openai
 
+# 33
 
 bot_token = os.environ['BOT_TOKEN']
 api_hash = os.environ['API_HASH']
