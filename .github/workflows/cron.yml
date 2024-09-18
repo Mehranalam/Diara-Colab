@@ -10,6 +10,7 @@ env:
   API_HASH: ${{ secrets.API_HASH }}
   API_ID: ${{ secrets.API_ID }}
   BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+  OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
 
 jobs:
   build-and-deploy:
