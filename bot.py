@@ -98,7 +98,7 @@ except:
 
 async def main():
     async with app:
-        l = app.get_chat_history(chat_id=TARGET, limit=1)[0]
+        l = await app.get_chat_history(chat_id=TARGET, limit=1)[0]
         await app.send_message(TARGET ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
         await app.send_message(TARGET ,maintain , reply_to_message_id=l.message_id)
 
