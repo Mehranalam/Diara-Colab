@@ -84,8 +84,11 @@ def mind(result):
 لطفا انتهای پست هم رفرنس بزار و ارجاع بده.
 """
     response = model.generate_content(content)
+
+    rtl = response.text
+    uio = rtl.replace("#", "")
     
-    return response.text
+    return uio
 
 
 try:
