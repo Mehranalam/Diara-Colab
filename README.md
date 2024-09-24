@@ -8,7 +8,7 @@ Diara Colab is an automatic article receiving service that is integrated with Go
 
 ### How Diara Colab Works:
 
-1. **Integration with Google Scholar**: 
+1. **Integration with Google Scholar**: .
    - Diara Colab is connected to your Google Scholar account. It can automatically monitor new publications and citations related to the keywords, authors, or topics you're interested in.
    - By linking your Google Scholar account, Diara Colab can regularly check for new articles, papers, or citations that match your predefined criteria.
 
