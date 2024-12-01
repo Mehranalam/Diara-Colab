@@ -11,7 +11,7 @@ api_id = os.environ['API_ID']
 
 open_token = os.environ['OPENAI_TOKEN']
 
-TARGET = 'DiaraArchive'
+TARGET = 'DiaraToken'
 
 app = Client(
     "my_bot",
