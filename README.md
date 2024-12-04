@@ -4,7 +4,7 @@
 
 ![pic](PIC.jpg)
 
-> ## https://t.me/DiaraArchive
+> ## https://t.me/DiaraToken
 
 Diara Colab is an automatic article receiving service that is integrated with Google Scholar. It is designed to streamline the process of collecting and managing academic publications by automatically pulling in articles relevant to your research interests.
 
