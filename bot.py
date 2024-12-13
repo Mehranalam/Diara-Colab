@@ -81,7 +81,6 @@ def mind(result):
 لینک مقاله و خلاصه‌ای ازش: {result}
 
 لطفا انتهای پست هم رفرنس بزار و ارجاع بده.
-اگه هم فایل PDF بود و دسترسی نداشتی یک خبر درمورد مهندسی پزشکی بفرست یه خبر علمی
 """
     response = model.generate_content(content)
 
@@ -114,7 +113,7 @@ except:
 async def main():
     async with app:
         sent_message = await (app.send_message(TARGET ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
-        sent_message = await (app.send_message(n ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
+        sent_message_67 = await (app.send_message(n ,disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
         await app.send_message(TARGET ,maintain , reply_to_message_id=sent_message.id)
 
 app.run(main())
