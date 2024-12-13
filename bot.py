@@ -91,18 +91,35 @@ def mind(result):
     
     return uio
 
+def news():
+    genai.configure(api_key=open_token)
+
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    content = f"""
+ یک خبر درمورد مهندسی پزشکی بفرست یه خبر علمی و حرفه‌ای میخوام بدونم الان مهندسی پزشکی در دنیا چه پیشرفتی کرده و من عقب نمونم
+"""
+    response = model.generate_content(content)
+
+    rtl = response.text
+    uio = rtl.replace("#", "")
+    
+    return uio
+
 
 try:
     resukt = welcome()
     maintain = mind(resukt)
+    n = news()
 except:
     print("again! :))")
     resukt = welcome()
     maintain = mind(resukt)
+    n = news()
 
 async def main():
     async with app:
         sent_message = await (app.send_message(TARGET ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
+        sent_message = await (app.send_message(n ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
         await app.send_message(TARGET ,maintain , reply_to_message_id=sent_message.id)
 
 app.run(main())
