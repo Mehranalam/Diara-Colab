@@ -19,6 +19,7 @@ app = Client(
     bot_token=bot_token
 )
 
+genai.configure(api_key=open_token)
 
 def welcome():
     keywords = [
@@ -74,8 +75,6 @@ def welcome():
 
 
 def mind(result):
-    genai.configure(api_key=open_token)
-
     model = genai.GenerativeModel("gemini-1.5-flash")
     content = f"""لطفا این مقاله رو به شکل خیلی خوب و با جزيیات بررسی کن و برداشت هات رو به شکل زبان عامیانه فارسی به‌طور کامل شرح بده بطور علمی و دقیق با فرمولها و دلایل حرفه‌ای و دقیقا توضیح بده این مقاله رو.
 
@@ -92,8 +91,6 @@ def mind(result):
     return uio
 
 def news():
-    genai.configure(api_key=open_token)
-
     model = genai.GenerativeModel("gemini-1.5-flash")
     content = f"یک خبر درمورد مهندسی پزشکی بفرست یه خبر علمی و حرفه‌ای میخوام بدونم الان مهندسی پزشکی در دنیا چه پیشرفتی کرده و من عقب نمونم"
     response = model.generate_content(content)
