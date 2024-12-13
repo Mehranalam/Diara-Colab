@@ -95,9 +95,7 @@ def news():
     genai.configure(api_key=open_token)
 
     model = genai.GenerativeModel("gemini-1.5-flash")
-    content = f"""
- یک خبر درمورد مهندسی پزشکی بفرست یه خبر علمی و حرفه‌ای میخوام بدونم الان مهندسی پزشکی در دنیا چه پیشرفتی کرده و من عقب نمونم
-"""
+    content = f"یک خبر درمورد مهندسی پزشکی بفرست یه خبر علمی و حرفه‌ای میخوام بدونم الان مهندسی پزشکی در دنیا چه پیشرفتی کرده و من عقب نمونم"
     response = model.generate_content(content)
 
     rtl = response.text
