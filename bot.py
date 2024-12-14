@@ -103,17 +103,14 @@ def news():
 try:
     resukt = welcome()
     maintain = mind(resukt)
-    n = news()
 except:
     print("again! :))")
     resukt = welcome()
     maintain = mind(resukt)
-    n = news()
 
 async def main():
     async with app:
         sent_message = await (app.send_message(TARGET ,resukt, disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
         await app.send_message(TARGET ,maintain , reply_to_message_id=sent_message.id)
-        sent_message_67 = await (app.send_message(TARGET ,n ,disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN))
-
+        
 app.run(main())
