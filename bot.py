@@ -23,37 +23,26 @@ genai.configure(api_key=open_token)
 
 def welcome():
     keywords = [
-            "Biomaterials",
-            "Bioinformatics",
-            "Biomedical Imaging",
-            "Biomimetics",
-            "Tissue Engineering",
-            "Medical Devices",
-            "Neuroengineering",
-            "Biosensors",
-            "Bioprinting",
-            "Clinical Engineering",
-            "Rehabilitation Engineering",
-            "Bioelectrics",
-            "Biomechanics",
-            "Nanomedicine",
-            "Regenerative Medicine",
-            "Biomedical Signal Processing",
-            "Genetic Engineering",
-            "Pharmacokinetics",
-            "Medical Robotics",
-            "Wearable Health Technology",
-            "Telemedicine",
-            "Cardiovascular Engineering",
-            "Orthopaedic Bioengineering",
-            "Prosthetics and Implants",
-            "Biochemical Engineering",
-            "Optical Imaging",
-            "Molecular Imaging",
-            "Artificial Organs",
-            "Cancer Bioengineering",
-            "Human-Computer Interaction in Healthcare"
-        ]
+    "Supervised Learning", "Unsupervised Learning", "Neural Networks", 
+    "Deep Learning", "Support Vector Machines (SVM)", "Gradient Boosting", 
+    "Decision Trees", "Random Forest", "Reinforcement Learning", 
+    "Feature Engineering", "Overfitting", "Cross-Validation", 
+    "Hyperparameter Tuning", "Bias-Variance Tradeoff", "Model Evaluation (Accuracy, Precision, Recall, F1-Score)",
+    
+    "Exploratory Data Analysis (EDA)", "Data Cleaning", "Data Transformation", 
+    "Descriptive Statistics", "Correlation Analysis", "Hypothesis Testing", 
+    "Data Visualization (e.g., Matplotlib, Seaborn)", "Statistical Inference", 
+    "Time Series Analysis", "Data Wrangling", "Data Aggregation", 
+    "Anomaly Detection", "Sampling Methods",
+    
+    "Data Mining", "Predictive Modeling", "Data Pipelines", "Big Data", 
+    "SQL (Structured Query Language)", "NoSQL Databases", "Data Warehousing", 
+    "A/B Testing", "Data Governance", "Cloud Computing (e.g., AWS, Google Cloud)", 
+    "Machine Learning Algorithms", "Data Science Lifecycle", "Model Deployment", 
+    "Feature Selection", "Natural Language Processing (NLP)"
+    ]
+
+
 
     selected_keyword = random.choice(keywords)
     search_query = scholarly.search_pubs(selected_keyword)
