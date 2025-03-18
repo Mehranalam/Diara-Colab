@@ -11,7 +11,7 @@ api_id = os.environ['API_ID']
 # ...
 open_token = os.environ['OPENAI_TOKEN']
 
-TARGET = 1002326551656
+TARGET = -1002326551656
 
 app = Client(
     "my_bot",
