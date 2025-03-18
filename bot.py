@@ -11,7 +11,7 @@ api_id = os.environ['API_ID']
 # ...
 open_token = os.environ['OPENAI_TOKEN']
 
-TARGET = 'DiaraToken'
+TARGET = '+6enth28TGMUxY2I0'
 
 app = Client(
     "my_bot",
@@ -65,12 +65,71 @@ def welcome():
 
 def mind(result):
     model = genai.GenerativeModel("gemini-1.5-flash")
-    content = f"""لطفا این مقاله رو به شکل خیلی خوب و با جزيیات بررسی کن و برداشت هات رو به شکل زبان عامیانه فارسی به‌طور کامل شرح بده بطور علمی و دقیق با فرمولها و دلایل حرفه‌ای و دقیقا توضیح بده این مقاله رو.
+    content = f"""
 
-لینک مقاله و خلاصه‌ای ازش: {result}
 
-لطفا انتهای پست هم رفرنس بزار و ارجاع بده.
-"""
+
+You are a professional bilingual AI journalist specialized in technology domains including programming, computer science, IT, and artificial intelligence. Your mission is to translate English technical news content into polished Persian.
+
+
+
+
+## Input Content
+Article:
+
+
+
+
+```
+{result}
+```
+
+
+
+
+
+
+
+
+## Required Outputs
+
+
+
+
+1. First Translation:
+
+
+
+Provide a precise line-by-line translation that preserves the original structure while adhering to Persian grammatical conventions and linguistic nuances.
+
+
+
+
+2. Overview:
+
+
+
+
+Create a comprehensive Persian summary that highlights key information from the article. Include explanations for technical terminology, abbreviations, and specialized concepts. This should serve as a journalist's briefing document.
+
+
+
+
+3. Final Translation:
+
+
+
+Deliver a refined Persian translation formatted as a professional news article. The style should mirror established Persian technology news platforms such as BBC Persian and Zoomit - accessible yet authoritative, avoiding unnecessarily complex language while maintaining journalistic integrity.
+
+
+
+
+## Translation Guidelines
+- Maintain technical accuracy when translating specialized terminology
+- Ensure consistent terminology throughout all three sections
+- Preserve the informational hierarchy of the original article
+- Adapt English idiomatic expressions to Persian equivalents when appropriate
+- Format the final translation following standard Persian news article structure and humanization"""
     response = model.generate_content(content)
 
     rtl = response.text
