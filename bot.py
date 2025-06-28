@@ -40,9 +40,38 @@ def welcome():
     "A/B Testing", "Data Governance", "Cloud Computing (e.g., AWS, Google Cloud)", 
     "Machine Learning Algorithms", "Data Science Lifecycle", "Model Deployment", 
     "Feature Selection", "Natural Language Processing (NLP)"
+            "Biomaterials",
+            "Bioinformatics",
+            "Biomedical Imaging",
+            "Biomimetics",
+            "Tissue Engineering",
+            "Medical Devices",
+            "Neuroengineering",
+            "Biosensors",
+            "Bioprinting",
+            "Clinical Engineering",
+            "Rehabilitation Engineering",
+            "Bioelectrics",
+            "Biomechanics",
+            "Nanomedicine",
+            "Regenerative Medicine",
+            "Biomedical Signal Processing",
+            "Genetic Engineering",
+            "Pharmacokinetics",
+            "Medical Robotics",
+            "Wearable Health Technology",
+            "Telemedicine",
+            "Cardiovascular Engineering",
+            "Orthopaedic Bioengineering",
+            "Prosthetics and Implants",
+            "Biochemical Engineering",
+            "Optical Imaging",
+            "Molecular Imaging",
+            "Artificial Organs",
+            "Cancer Bioengineering",
+            "Human-Computer Interaction in Healthcare"
+
     ]
-
-
 
     selected_keyword = random.choice(keywords)
     search_query = scholarly.search_pubs(selected_keyword)
